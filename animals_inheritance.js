@@ -1,10 +1,11 @@
 "use strict"
 
 class Animal {
-	constructor(legs, fingers) {
+	constructor(name, legs, fingers) {
+		this._name = name
 		this._legs = legs
 		this._fingers = fingers
-		this._superPower = new SuperPower()
+		this._superPower = new SuperPower(this._name)
 	}
 
 	speak() {
@@ -14,7 +15,7 @@ class Animal {
 
 class Frog extends Animal {
 	constructor(color) {
-		super(4, 3)
+		super('Frog', 4, 3)
 		this._color = color
 	}
 
@@ -25,29 +26,29 @@ class Frog extends Animal {
 
 class Cat extends Animal {
 	constructor(eyeColor) {
-		super(4, 4)
+		super('Cat', 4, 4)
 		this._eyeColor = eyeColor
 	}
 }
 
 class Wolf extends Animal {
 	constructor(woofSound) {
-		super(4,4)
+		super('Wolf', 4, 4)
 		this._woofSound = woofSound
 	}
 }
 
 class SuperPower {
-	constructor(){
-
+	constructor(name){
+		this._name = name
 	}
 
 	use_laser_vision() {
-		return 'using laser vision!'
+		return `${this._name} using laser vision!`
 	}
 
 	be_invisible() {
-		return 'being invisible!'
+		return `${this._name} being invisible!`
 	}
 }
 
