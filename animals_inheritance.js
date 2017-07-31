@@ -50,7 +50,7 @@ class SuperPower {
 let kucing = new Cat(4, 'ikan', "Kucing");
 let rubah = new Fox(4, 'daging', "Rubah");
 
-// let superPower = new SuperPower('berubah menjadi Singa');
+
 console.log(kucing.warna('Belang'));
 console.log(kucing.ket());
 console.log(kucing.superpower.beTheKing());
